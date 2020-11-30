@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "TRTC Demo";
+}
+<div id="root">
+    <!-- 登录页面 -->
+    <partial name="_Login.cshtml" />
+    <!-- 设备检测界面弹窗 -->
+    <partial name="_EquipmentCheck.cshtml" />
+    <!-- 聊天室页面 -->
+    <partial name="_CheatRoom.cshtml" />
+</div>
+<!-- 展示不支持webRTC的提示 -->
+<div id="remind-info-container" style="justify-content: center; display: none;">
+    <!-- 在ios端webview引导用户打开safari浏览器 -->
+    <div id="webview-remind" class="webview-remind">
+        <img class="webview-remind-img" src="/imgs/right-top-arrow.png" alt="right-top-arrow">
+        <div class="webview-remind-info">
+            <span>点击右上角 ··· 图标</span>
+            <span style="display: inline-block; margin-top: 10px;">选择在safari浏览器中打开</span>
+        </div>
+    </div>
+    <!-- 提醒用户用可以使用的浏览器打开 -->
+    <div id="browser-remind" class="browser-remind">
+        <div id="remind-icon" style="width: 100%; font-size: 28px;">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-warn"></use>
+            </svg>
+            <span style="display: inline-block; margin-left: 5px">提示</span>
+        </div>
+        <div id="remind-info" class="remind-info"></div>
+    </div>
+</div>
