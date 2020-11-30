@@ -9,5 +9,19 @@
     <div>
         @RenderBody()
     </div>
+    <footer>
+        <script src="/js/jquery-3.2.1.min.js"></script>
+        <script src="/js/popper.js"></script>
+        <script src="/js/lib-generate-test-usersig.min.js"></script>
+        <script src="/js/viewjs/user-sig.js"></script>
+        <script src="/js/trtc.js"></script>
+        <script src="/js/common.js"></script>
+        <script src="/js/rtc-client.js"></script>
+        <script src="/js/share-client.js"></script>
+        <script src="/js/presetting.js"></script>
+        <script src="/js/rtc-detection.js"></script>
+        <script src="/js/index.js"></script>
+        @RenderSection("foot", required: false)
+    </footer>
 </body>
 </html>
